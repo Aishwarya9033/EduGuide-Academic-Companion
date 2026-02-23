@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGuide | Academic & Career Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glassmorphism shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="#" class="flex items-center">
+                            <i class="fas fa-graduation-cap text-2xl text-primary-600 dark:text-primary-400 mr-2"></i>
+                            <span class="text-xl font-bold text-primary-600 dark:text-primary-400">EduGuide</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300">Home</a>
+                            <a href="#pyqs" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300">PYQs</a>
+                            <a href="#roadmap" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300">Roadmap</a>
+                            <a href="#resources" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300">Resources</a>
+                            <a href="#placement" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300">Placement</a>
+                            <a href="#alumni" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300">Alumni</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-4 flex items-center md:ml-6 space-x-4">
+                        <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                            <i class="fas fa-moon dark:hidden"></i>
+                            <i class="fas fa-sun hidden dark:block"></i>
+                        </button>
+                        <div class="relative">
+                            <button id="notification-btn" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 relative">
+                                <i class="fas fa-bell"></i>
+                                <span class="absolute top-0 right-0 h-2 w-2 rounded-full bg-red-500"></span>
+                            </button>
+                            <div id="notification-dropdown" class="hidden absolute right-0 mt-2 w-72 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-50">
+                                <div class="px-4 py-2 border-b border-gray-200 dark:border-gray-700">
+                                    <p class="text-sm font-medium">Notifications</p>
+                                </div>
+                                <div class="max-h-60 overflow-y-auto">
+                                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">New PYQs added for CSE 3rd Sem</a>
+                                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">Upcoming placement drive: TCS on 15th Oct</a>
+                                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">New resource: DSA Crash Course</a>
+                                </div>
+                                <div class="px-4 py-2 border-t border-gray-200 dark:border-gray-700">
+                                    <a href="#" class="text-sm text-primary-600 dark:text-primary-400">View all</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="px-4 py-2 bg-primary-600 text-white rounded-md text-sm font-medium hover:bg-primary-700">
+                            Sign In
+                        </button>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300">Home</a>
+                <a href="#pyqs" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300">PYQs</a>
+                <a href="#roadmap" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300">Roadmap</a>
+                <a href="#resources" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300">Resources</a>
+                <a href="#placement" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300">Placement</a>
+                <a href="#alumni" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-700 dark:hover:text-primary-300">Alumni</a>
+            </div>
+            <div class="pt-4 pb-3 border-t border-gray-200 dark:border-gray-700">
+                <div class="flex items-center px-5 space-x-4">
+                    <button id="mobile-theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-notification-btn" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 relative">
+                        <i class="fas fa-bell"></i>
+                        <span class="absolute top-0 right-0 h-2 w-2 rounded-full bg-red-500"></span>
+                    </button>
+                    <button class="px-4 py-2 bg-primary-600 text-white rounded-md text-sm font-medium hover:bg-primary-700">
+                        Sign In
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 bg-gradient-to-r from-primary-500 to-secondary-500 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Your Complete Academic Companion</h1>
+                    <p class="text-xl mb-8">Access previous year papers, skill roadmaps, placement resources, and alumni connections - all in one place.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#pyqs" class="px-6 py-3 bg-white text-primary-600 rounded-md text-center font-medium hover:bg-gray-100 shadow-lg transition duration-300">Explore Resources</a>
+                        <a href="#" class="px-6 py-3 border-2 border-white text-white rounded-md text-center font-medium hover:bg-white hover:text-primary-600 transition duration-300">Get Started</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -top-10 -left-10 w-32 h-32 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                        <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-secondary-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                        <div class="absolute top-20 -right-20 w-32 h-32 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+                        <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Students studying" class="w-full h-auto">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Join 10,000+ Students</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Access premium resources curated by alumni and industry experts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-lg shadow">
+                    <div class="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">1,200+</div>
+                    <div class="text-gray-600 dark:text-gray-300">PYQs</div>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-lg shadow">
+                    <div class="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">500+</div>
+                    <div class="text-gray-600 dark:text-gray-300">Learning Resources</div>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-lg shadow">
+                    <div class="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">200+</div>
+                    <div class="text-gray-600 dark:text-gray-300">Alumni Connections</div>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-lg shadow">
+                    <div class="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">50+</div>
+                    <div class="text-gray-600 dark:text-gray-300">Companies Hiring</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PYQs Section -->
+    <section id="pyqs" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Previous Year Question Papers</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Access question papers from past semesters to prepare effectively for your exams.</p>
+            </div>
+            
+            <div class="mb-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
+                    <div class="relative w-full md:w-64">
+                        <input type="text" placeholder="Search PYQs..." class="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <select class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800">
+                            <option>All Branches</option>
+                            <option>CSE</option>
+                            <option>IT</option>
+                            <option>ECE</option>
+                            <option>EEE</option>
+                            <option>Mechanical</option>
+                        </select>
+                        <select class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800">
+                            <option>All Years</option>
+                            <option>1st Year</option>
+                            <option>2nd Year</option>
+                            <option>3rd Year</option>
+                            <option>4th Year</option>
+                        </select>
+                        <select class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800">
+                            <option>All Semesters</option>
+                            <option>Semester 1</option>
+                            <option>Semester 2</option>
+                            <option>Semester 3</option>
+                            <option>Semester 4</option>
+                            <option>Semester 5</option>
+                            <option>Semester 6</option>
+                            <option>Semester 7</option>
+                            <option>Semester 8</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- PYQ Card 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full">CSE</span>
+                                <span class="inline-block ml-2 px-3 py-1 text-xs font-semibold bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">2023</span>
+                            </div>
+                            <span class="px-3 py-1 text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full">Sem 3</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Data Structures & Algorithms</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Previous year question papers for DSA with solutions from 2019-2023.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="text-xs text-gray-500 dark:text-gray-400"><i class="fas fa-file-pdf mr-1 text-red-500"></i> PDF</span>
+                                <span class="text-xs text-gray-500 dark:text-gray-400"><i class="fas fa-download mr-1 text-blue-500"></i> 12.4 MB</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="p-2 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900 rounded-full">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="p-2 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900 rounded-full">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PYQ Card 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">IT</span>
+                                <span class="inline-block ml-2 px-3 py-1 text-xs font-semibold bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">2022</span>
+                            </div>
+                            <span class="px-3 py-1 text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full">Sem 4</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Database Management Systems</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Complete set of DBMS question papers with model answers from 2018-2022.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="text-xs text-gray-500 dark:text-gray-400"><i class="fas fa-file-pdf mr-1 text-red-500"></i> PDF</span>
+                                <span class="text-xs text-gray-500 dark:text-gray-400"><i class="fas fa-download mr-1 text-blue-500"></i> 8.7 MB</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="p-2 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900 rounded-full">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="p-2 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900 rounded-full">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PYQ Card 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full">ECE</span>
+                                <span class="inline-block ml-2 px-3 py-1 text-xs font-semibold bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">2021</span>
+                            </div>
+                            <span class="px-3 py-1 text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full">Sem 5</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Digital Signal Processing</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">DSP question papers collection with important questions highlighted.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="text-xs text-gray-500 dark:text-gray-400"><i class="fas fa-file-pdf mr-1 text-red-500"></i> PDF</span>
+                                <span class="text-xs text-gray-500 dark:text-gray-400"><i class="fas fa-download mr-1 text-blue-500"></i> 15.2 MB</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="p-2 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900 rounded-full">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="p-2 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900 rounded-full">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <button class="px-6 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 rounded-md font-medium hover:bg-primary-50 dark:hover:bg-primary-900 transition duration-300">
+                    View All PYQs
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="py-16 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">College Roadmap</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Structured skill development path from 1st to 4th year with recommended resources.</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="hidden md:block absolute left-1/2 h-full w-1 bg-primary-200 dark:bg-primary-800"></div>
+                
+                <!-- Year 1 -->
+                <div class="mb-12 md:flex md:items-center md:justify-between md:mb-24">
+                    <div class="md:w-5/12 md:pr-8 mb-6 md:mb-0">
+                        <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold mb-4">First Year</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Programming Fundamentals with C</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Basic Data Structures (Arrays, Strings, Pointers)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Mathematics for CS (Discrete Math, Calculus)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Basic Web Development (HTML, CSS)</span>
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <h4 class="font-medium mb-2">Recommended Resources:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="#" class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full hover:bg-blue-200 dark:hover:bg-blue-800">C Programming - Jenny's Lectures</a>
+                                    <a href="#" class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded-full hover:bg-purple-200 dark:hover:bg-purple-800">CS50 Harvard</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block md:w-2/12 text-center">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-600 text-white text-xl font-bold shadow-lg">1</div>
+                    </div>
+                    <div class="md:w-5/12"></div>
+                </div>
+                
+                <!-- Year 2 -->
+                <div class="mb-12 md:flex md:items-center md:justify-between md:mb-24">
+                    <div class="md:w-5/12"></div>
+                    <div class="hidden md:block md:w-2/12 text-center">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-600 text-white text-xl font-bold shadow-lg">2</div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-8">
+                        <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold mb-4">Second Year</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Object-Oriented Programming with Java/Python</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Advanced Data Structures & Algorithms</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Database Management Systems</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Operating Systems Concepts</span>
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <h4 class="font-medium mb-2">Recommended Resources:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="#" class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full hover:bg-blue-200 dark:hover:bg-blue-800">DSA - Abdul Bari</a>
+                                    <a href="#" class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded-full hover:bg-purple-200 dark:hover:bg-purple-800">Java - Kunal Kushwaha</a>
+                                    <a href="#" class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full hover:bg-green-200 dark:hover:bg-green-800">DBMS - Gate Smashers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Year 3 -->
+                <div class="mb-12 md:flex md:items-center md:justify-between md:mb-24">
+                    <div class="md:w-5/12 md:pr-8">
+                        <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold mb-4">Third Year</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Full Stack Web Development</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Computer Networks</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>System Design Basics</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Competitive Programming Practice</span>
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <h4 class="font-medium mb-2">Recommended Resources:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="#" class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full hover:bg-blue-200 dark:hover:bg-blue-800">Web Dev - Angela Yu</a>
+                                    <a href="#" class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded-full hover:bg-purple-200 dark:hover:bg-purple-800">CN - Neso Academy</a>
+                                    <a href="#" class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs rounded-full hover:bg-yellow-200 dark:hover:bg-yellow-800">CP - Striver's SDE Sheet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block md:w-2/12 text-center">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-600 text-white text-xl font-bold shadow-lg">3</div>
+                    </div>
+                    <div class="md:w-5/12"></div>
+                </div>
+                
+                <!-- Year 4 -->
+                <div class="md:flex md:items-center md:justify-between">
+                    <div class="md:w-5/12"></div>
+                    <div class="hidden md:block md:w-2/12 text-center">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-600 text-white text-xl font-bold shadow-lg">4</div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-8">
+                        <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold mb-4">Fourth Year</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Advanced System Design</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Interview Preparation (DSA, Projects, HR)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Resume Building & LinkedIn Optimization</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Mock Interviews & Aptitude Tests</span>
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <h4 class="font-medium mb-2">Recommended Resources:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="#" class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full hover:bg-blue-200 dark:hover:bg-blue-800">System Design - Gaurav Sen</a>
+                                    <a href="#" class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded-full hover:bg-purple-200 dark:hover:bg-purple-800">Interview Prep - NeetCode</a>
+                                    <a href="#" class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full hover:bg-green-200 dark:hover:bg-green-800">Resume Tips - LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Learning Resources</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Curated collection of the best free and paid resources for skill development.</p>
+            </div>
+            
+            <div class="mb-8">
+                <div class="flex flex-wrap gap-2 justify-center">
+                    <button class="px-4 py-2 bg-primary-600 text-white rounded-md text-sm font-medium">All</button>
+                    <button class="px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-md text-sm font-medium">Free</button>
+                    <button class="px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-md text-sm font-medium">Paid</button>
+                    <button class="px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-md text-sm font-medium">DSA</button>
+                    <button class="px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-md text-sm font-medium">Web Dev</button>
+                    <button class="px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-md text-sm font-medium">App Dev</button>
+                    <button class="px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-md text-sm font-medium">Core CS</button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Resource Card 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg" alt="DSA Course" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2">
+                            <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs font-semibold rounded">Free</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Data Structures & Algorithms</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Complete DSA course with implementation in C++ and Java.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <img src="https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj" alt="Instructor" class="w-8 h-8 rounded-full mr-2">
+                                <span class="text-sm">Abdul Bari</span>
+                            </div>
+                            <a href="#" class="text-primary-600 dark:text-primary-400 text-sm font-medium hover:underline">View</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Resource Card 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://img-c.udemycdn.com/course/480x270/1565838_e54e_12.jpg" alt="Web Dev Course" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2">
+                            <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs font-semibold rounded">Paid</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">The Complete Web Developer</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Become a full-stack developer with HTML, CSS, JS, Node, React, MongoDB.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <img src="https://img-c.udemycdn.com/user/200_H/31334738_a13c_3.jpg" alt="Instructor" class="w-8 h-8 rounded-full mr-2">
+                                <span class="text-sm">Angela Yu</span>
+                            </div>
+                            <a href="#" class="text-primary-600 dark:text-primary-400 text-sm font-medium hover:underline">View</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Resource Card 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://img-c.udemycdn.com/course/480x270/1362070_b9a1_2.jpg" alt="Java Course" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2">
+                            <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs font-semibold rounded">Free</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Java + DSA + Interview Prep</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Complete Java course with DSA and interview preparation.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <img src="https://yt3.googleusercontent.com/ytc/APkrFKaqca-x1dzH8r1FdE6ZoJN1zDY9VhQqKpEe8a3IMA=s176-c-k-c0x00ffffff-no-rj" alt="Instructor" class="w-8 h-8 rounded-full mr-2">
+                                <span class="text-sm">Kunal Kushwaha</span>
+                            </div>
+                            <a href="#" class="text-primary-600 dark:text-primary-400 text-sm font-medium hover:underline">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <button class="px-6 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 rounded-md font-medium hover:bg-primary-50 dark:hover:bg-primary-900 transition duration-300">
+                    View All Resources
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement Section -->
+    <section id="placement" class="py-16 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Placement Preparation</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Everything you need to crack your dream job placement.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Resume Section -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
+                                <i class="fas fa-file-alt text-primary-600 dark:text-primary-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Resume Templates</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">Download professionally designed resume templates for freshers.</p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="#" class="px-3 py-2 bg-gray-100 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-500 rounded-md text-sm text-center">Simple</a>
+                            <a href="#" class="px-3 py-2 bg-gray-100 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-500 rounded-md text-sm text-center">Modern</a>
+                            <a href="#" class="px-3 py-2 bg-gray-100 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-500 rounded-md text-sm text-center">Creative</a>
+                            <a href="#" class="px-3 py-2 bg-gray-100 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-500 rounded-md text-sm text-center">Technical</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interview Section -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
+                                <i class="fas fa-comments text-primary-600 dark:text-primary-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Interview Q&A</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Commonly asked technical and HR interview questions.</p>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 bg-gray-100 dark:bg-gray-600 rounded-md">
+                                <span>DSA Questions</span>
+                                <i class="fas fa-chevron-right text-gray-500"></i>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-100 dark:bg-gray-600 rounded-md">
+                                <span>DBMS Questions</span>
+                                <i class="fas fa-chevron-right text-gray-500"></i>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-100 dark:bg-gray-600 rounded-md">
+                                <span>HR Questions</span>
+                                <i class="fas fa-chevron-right text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Platforms Section -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
+                                <i class="fas fa-briefcase text-primary-600 dark:text-primary-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Job Platforms</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Best platforms to apply for internships and jobs.</p>
+                        <div class="space-y-3">
+                            <a href="#" class="flex items-center p-3 bg-gray-100 dark:bg-gray-600 rounded-md hover:bg-gray-200 dark:hover:bg-gray-500">
+                                <img src="https://logo.clearbit.com/linkedin.com" alt="LinkedIn" class="w-5 h-5 mr-3">
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="flex items-center p-3 bg-gray-100 dark:bg-gray-600 rounded-md hover:bg-gray-200 dark:hover:bg-gray-500">
+                                <img src="https://logo.clearbit.com/naukri.com" alt="Naukri" class="w-5 h-5 mr-3">
+                                <span>Naukri.com</span>
+                            </a>
+                            <a href="#" class="flex items-center p-3 bg-gray-100 dark:bg-gray-600 rounded-md hover:bg-gray-200 dark:hover:bg-gray-500">
+                                <img src="https://logo.clearbit.com/internshala.com" alt="Internshala" class="w-5 h-5 mr-3">
+                                <span>Internshala</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resume Analyzer -->
+            <div class="mt-12 bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold mb-4">AI Resume Analyzer</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">Upload your resume and get instant feedback on how to improve it for better placement opportunities.</p>
+                        <div class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
+                            <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-4"></i>
+                            <p class="mb-4">Drag & drop your resume file here</p>
+                            <p class="text-sm text-gray-500 mb-4">or</p>
+                            <button class="px-4 py-2 bg-primary-600 text-white rounded-md text-sm font-medium hover:bg-primary-700">Browse Files</button>
+                            <p class="text-xs text-gray-500 mt-4">Supports PDF, DOC, DOCX (Max 5MB)</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 bg-gray-50 dark:bg-gray-600 p-8">
+                        <h4 class="font-bold mb-4">Sample Analysis Report</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">ATS Compatibility</span>
+                                    <span class="text-sm">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-500 rounded-full h-2">
+                                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">Skills Highlight</span>
+                                    <span class="text-sm">8/10</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-500 rounded-full h-2">
+                                    <div class="bg-green-500 h-2 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">Formatting</span>
+                                    <span class="text-sm">6/10</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-500 rounded-full h-2">
+                                    <div class="bg-blue-500 h-2 rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="font-bold mb-2">Suggestions</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                                <li>Add more quantifiable achievements in experience section</li>
+                                <li>Include relevant coursework for freshers</li>
+                                <li>Reduce white space by adjusting margins</li>
+                                <li>Add a skills section at the top</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Section -->
+    <section id="alumni" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Alumni Network</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Connect with alumni from your college working at top companies.</p>
+            </div>
+            
+            <div class="mb-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
+                    <div class="relative w-full md:w-64">
+                        <input type="text" placeholder="Search alumni..." class="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <select class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800">
+                            <option>All Companies</option>
+                            <option>Google</option>
+                            <option>Microsoft</option>
+                            <option>Amazon</option>
+                            <option>TCS</option>
+                            <option>Infosys</option>
+                        </select>
+                        <select class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800">
+                            <option>All Domains</option>
+                            <option>Software Engineering</option>
+                            <option>Data Science</option>
+                            <option>Product Management</option>
+                            <option>Consulting</option>
+                            <option>Finance</option>
+                        </select>
+                        <select class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800">
+                            <option>All Batches</option>
+                            <option>2015-2019</option>
+                            <option>2016-2020</option>
+                            <option>2017-2021</option>
+                            <option>2018-2022</option>
+                            <option>2019-2023</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Alumni Card 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Alumni" class="w-16 h-16 rounded-full mr-4">
+                            <div>
+                                <h3 class="font-bold">Priya Sharma</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">SDE 2 at Amazon</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-500">2017-2021 Batch</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 text-sm">Worked on AWS Lambda services. Previously at Microsoft. Happy to help with interview prep.</p>
+                        <div class="flex space-x-2">
+                            <a href="#" class="p-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full hover:bg-blue-200 dark:hover:bg-blue-800">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="p-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <button class="ml-auto px-3 py-1 bg-primary-600 text-white rounded-md text-xs font-medium hover:bg-primary-700">
+                                Connect
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Alumni Card 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alumni" class="w-16 h-16 rounded-full mr-4">
+                            <div>
+                                <h3 class="font-bold">Rahul Verma</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Product Manager at Google</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-500">2015-2019 Batch</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 text-sm">Leading Gmail mobile team. Can guide on PM interviews and career growth.</p>
+                        <div class="flex space-x-2">
+                            <a href="#" class="p-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full hover:bg-blue-200 dark:hover:bg-blue-800">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="p-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <button class="ml-auto px-3 py-1 bg-primary-600 text-white rounded-md text-xs font-medium hover:bg-primary-700">
+                                Connect
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Alumni Card 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Alumni" class="w-16 h-16 rounded-full mr-4">
+                            <div>
+                                <h3 class="font-bold">Ananya Patel</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Data Scientist at Microsoft</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-500">2018-2022 Batch</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 text-sm">Working on Azure AI. Can share resources for ML and data science preparation.</p>
+                        <div class="flex space-x-2">
+                            <a href="#" class="p-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full hover:bg-blue-200 dark:hover:bg-blue-800">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="p-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <button class="ml-auto px-3 py-1 bg-primary-600 text-white rounded-md text-xs font-medium hover:bg-primary-700">
+                                Connect
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <button class="px-6 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 rounded-md font-medium hover:bg-primary-50 dark:hover:bg-primary-900 transition duration-300">
+                    View All Alumni
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section class="py-16 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Monthly Leaderboard</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Top performers in our weekly challenges and quizzes.</p>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden">
+                <div class="grid grid-cols-12 bg-gray-100 dark:bg-gray-600 p-4 font-medium">
+                    <div class="col-span-1">Rank</div>
+                    <div class="col-span-5">Student</div>
+                    <div class="col-span-3">Points</div>
+                    <div class="col-span-3">Badges</div>
+                </div>
+                
+                <div class="divide-y divide-gray-200 dark:divide-gray-600">
+                    <!-- Rank 1 -->
+                    <div class="grid grid-cols-12 items-center p-4 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <div class="col-span-1 flex items-center">
+                            <span class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-white font-bold">1</span>
+                        </div>
+                        <div class="col-span-5 flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Student" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <div class="font-medium">Aarav Sharma</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">CSE 3rd Year</div>
+                            </div>
+                        </div>
+                        <div class="col-span-3">
+                            <div class="flex items-center">
+                                <span class="font-medium mr-2">1,245</span>
+                                <span class="text-xs text-green-500">+125 this week</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-500 rounded-full h-2 mt-1">
+                                <div class="bg-yellow-500 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="col-span-3 flex space-x-2">
+                            <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded-full">Top Coder</span>
+                            <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Quiz Master</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Rank 2 -->
+                    <div class="grid grid-cols-12 items-center p-4 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <div class="col-span-1 flex items-center">
+                            <span class="w-8 h-8 bg-gray-300 dark:bg-gray-500 rounded-full flex items-center justify-center text-white font-bold">2</span>
+                        </div>
+                        <div class="col-span-5 flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Student" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <div class="font-medium">Neha Gupta</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">IT 2nd Year</div>
+                            </div>
+                        </div>
+                        <div class="col-span-3">
+                            <div class="flex items-center">
+                                <span class="font-medium mr-2">1,120</span>
+                                <span class="text-xs text-green-500">+98 this week</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-500 rounded-full h-2 mt-1">
+                                <div class="bg-gray-400 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="col-span-3 flex space-x-2">
+                            <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full">DSA Expert</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Rank 3 -->
+                    <div class="grid grid-cols-12 items-center p-4 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <div class="col-span-1 flex items-center">
+                            <span class="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold">3</span>
+                        </div>
+                        <div class="col-span-5 flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Student" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <div class="font-medium">Rohan Singh</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">ECE 4th Year</div>
+                            </div>
+                        </div>
+                        <div class="col-span-3">
+                            <div class="flex items-center">
+                                <span class="font-medium mr-2">1,045</span>
+                                <span class="text-xs text-green-500">+87 this week</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-500 rounded-full h-2 mt-1">
+                                <div class="bg-amber-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="col-span-3 flex space-x-2">
+                            <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Quiz Master</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Rank 4 -->
+                    <div class="grid grid-cols-12 items-center p-4 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <div class="col-span-1 flex items-center">
+                            <span class="w-8 h-8 rounded-full flex items-center justify-center text-gray-800 dark:text-gray-200 font-bold">4</span>
+                        </div>
+                        <div class="col-span-5 flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Student" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <div class="font-medium">Priya Reddy</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">CSE 2nd Year</div>
+                            </div>
+                        </div>
+                        <div class="col-span-3">
+                            <div class="flex items-center">
+                                <span class="font-medium mr-2">980</span>
+                                <span class="text-xs text-green-500">+76 this week</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-500 rounded-full h-2 mt-1">
+                                <div class="bg-primary-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="col-span-3 flex space-x-2">
+                            <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded-full">Top Coder</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Rank 5 -->
+                    <div class="grid grid-cols-12 items-center p-4 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <div class="col-span-1 flex items-center">
+                            <span class="w-8 h-8 rounded-full flex items-center justify-center text-gray-800 dark:text-gray-200 font-bold">5</span>
+                        </div>
+                        <div class="col-span-5 flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Student" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <div class="font-medium">Vikram Joshi</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">IT 3rd Year</div>
+                            </div>
+                        </div>
+                        <div class="col-span-3">
+                            <div class="flex items-center">
+                                <span class="font-medium mr-2">920</span>
+                                <span class="text-xs text-red-500">-15 this week</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-500 rounded-full h-2 mt-1">
+                                <div class="bg-primary-600 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="col-span-3 flex space-x-2">
+                            <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full">DSA Expert</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Weekly Challenge -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
+                                <i class="fas fa-trophy text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Weekly Challenge</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Solve 5 DSA problems and earn bonus points this week!</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Ends in:</span>
+                                <span class="font-medium ml-2">3 days</span>
+                            </div>
+                            <button class="px-4 py-2 bg-primary-600 text-white rounded-md text-sm font-medium hover:bg-primary-700">
+                                Participate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Badges -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
+                                <i class="fas fa-award text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Your Badges</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Earn badges by completing challenges and quizzes.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">Beginner</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Quizzer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Progress -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
+                                <i class="fas fa-chart-line text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Your Progress</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span>PYQs Solved</span>
+                                    <span>12/50</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-500 rounded-full h-2">
+                                    <div class="bg-primary-600 h-2 rounded-full" style="width: 24%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span>Roadmap Completed</span>
+                                    <span>35%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-500 rounded-full h-2">
+                                    <div class="bg-green-500 h-2 rounded-full" style="width: 35%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span>Leaderboard Rank</span>
+                                    <span>#27</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-500 rounded-full h-2">
+                                    <div class="bg-purple-500 h-2 rounded-full" style="width: 65%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Success Stories</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Hear from students who cracked their dream jobs with our resources.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/11.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h3 class="font-bold">Anjali Mehta</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Placed at Amazon</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 italic">"The PYQs and DSA roadmap helped me immensely in my Amazon interview preparation. I could practice real questions asked in previous campus drives."</p>
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h3 class="font-bold">Rahul Deshpande</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Placed at Microsoft</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 italic">"The alumni connect feature was game-changing. I got direct guidance from a senior working at Microsoft which helped me understand what they look for in candidates."</p>
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h3 class="font-bold">Priya Reddy</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Placed at Goldman Sachs</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 italic">"The resume analyzer pointed out gaps I didn't notice. After making suggested changes, I started getting callbacks from all the companies I applied to."</p>
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
+        <div id="chatbot-box" class="hidden w-80 h-96 bg-white dark:bg-gray-800 rounded-t-xl shadow-xl flex flex-col">
+            <div class="p-4 bg-primary-600 text-white rounded-t-xl flex justify-between items-center">
+                <h3 class="font-medium">EduGuide Assistant</h3>
+                <button id="minimize-chatbot" class="text-white hover:text-gray-200">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+            <div id="chatbot-messages" class="flex-1 p-4 overflow-y-auto">
+                <div class="mb-4">
+                    <div class="inline-block px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg rounded-bl-none max-w-xs">
+                        <p class="text-sm">Hi there! I'm your EduGuide assistant. How can I help you today?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 border-t border-gray-200 dark:border-gray-700">
+                <div class="flex">
+                    <input type="text" placeholder="Type your message..." class="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700">
+                    <button class="px-4 py-2 bg-primary-600 text-white rounded-r-lg hover:bg-primary-700">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button id="chatbot-toggle" class="w-14 h-14 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 flex items-center justify-center">
+            <i class="fas fa-robot text-xl"></i>
+        </button>
+    </div>
+
+    <!-- Feedback Section -->
+    <section class="py-16 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold mb-2">Give Us Feedback</h2>
+                    <p class="text-gray-600 dark:text-gray-400">We'd love to hear your thoughts to improve EduGuide.</p>
+                </div>
+                
+                <form>
+                    <div class="mb-6">
+                        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email (optional)</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Rating</label>
+                        <div class="flex space-x-2">
+                            <button type="button" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-600 hover:bg-yellow-400 dark:hover:bg-yellow-400 flex items-center justify-center">
+                                <i class="far fa-star"></i>
+                            </button>
+                            <button type="button" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-600 hover:bg-yellow-400 dark:hover:bg-yellow-400 flex items-center justify-center">
+                                <i class="far fa-star"></i>
+                            </button>
+                            <button type="button" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-600 hover:bg-yellow-400 dark:hover:bg-yellow-400 flex items-center justify-center">
+                                <i class="far fa-star"></i>
+                            </button>
+                            <button type="button" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-600 hover:bg-yellow-400 dark:hover:bg-yellow-400 flex items-center justify-center">
+                                <i class="far fa-star"></i>
+                            </button>
+                            <button type="button" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-600 hover:bg-yellow-400 dark:hover:bg-yellow-400 flex items-center justify-center">
+                                <i class="far fa-star"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="feedback" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your Feedback</label>
+                        <textarea id="feedback" rows="4" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800"></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="px-6 py-3 bg-primary-600 text-white rounded-md font-medium hover:bg-primary-700 transition duration-300">
+                            Submit Feedback
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-medium mb-4">EduGuide</h3>
+                    <p class="mb-4">Your complete academic and career companion for college students.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-medium mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-white">Home</a></li>
+                        <li><a href="#pyqs" class="hover:text-white">PYQs</a></li>
+                        <li><a href="#roadmap" class="hover:text-white">Roadmap</a></li>
+                        <li><a href="#resources" class="hover:text-white">Resources</a></li>
+                        <li><a href="#placement" class="hover:text-white">Placement</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-medium mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-medium mb-4">Newsletter</h3>
+                    <p class="mb-4">Subscribe to get updates on new resources and features.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="px-4 py-2 bg-primary-600 text-white rounded-r-lg hover:bg-primary-700">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2023 EduGuide. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

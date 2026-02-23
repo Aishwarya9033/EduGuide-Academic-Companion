@@ -1,0 +1,27 @@
+
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.dark .glassmorphism {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.18);
+}
+.neumorphism {
+    border-radius: 16px;
+    box-shadow:  8px 8px 16px #d1d9e6, 
+                -8px -8px 16px #ffffff;
+}
+.dark .neumorphism {
+    box-shadow:  8px 8px 16px #0f172a, 
+                -8px -8px 16px #1e293b;
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.dark .card-hover:hover {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
