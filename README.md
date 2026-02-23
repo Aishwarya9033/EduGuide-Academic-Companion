@@ -1,3 +1,7 @@
+EduGuide - Academic & Career Portal
+
+🔗 Live Demo (https://aishwarya9033.github.io/EduGuide-Academic-Companion/)
+
 🎓 Overview
 EduGuide is a comprehensive academic and career portal designed for college students. It provides easy access to Previous Year Question Papers (PYQs), skill roadmaps, placement resources, and alumni connections - all in one place.
 
